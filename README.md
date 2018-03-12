@@ -5,7 +5,7 @@ Boilerplate para configuração rápida de containers Docker para proxy reverso 
 ## Imagens utilizadas
 
 1. [portainer](https://github.com/portainer/portainer)
-2. [nginx](https://github.com/containous/traefik)
+2. [traefik](https://github.com/containous/traefik)
 
 ## Contribuição
 
