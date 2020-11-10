@@ -1,0 +1,19 @@
+version: "3"
+
+networks:
+  web:
+    external: true
+  internal:
+    external: false
+
+services:
+  whoami:
+    image: "traefik/whoami"
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.whoami.rule=Host(`whoami.domain.test`)
+      - traefik.http.routers.whoami.entrypoints=web
+      - traefik.port=80
+    networks:
+      - internal
+      - web
