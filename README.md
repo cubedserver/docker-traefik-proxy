@@ -1,24 +1,26 @@
 # Traefik Boilerplate Proxy
 
-Boilerplate para configuração rápida de containers Docker para proxy reverso com traefik, configuração automática de virtualhosts e geração de certificados SSL com Let's Encrypt.
+Boilerplate for quick configuration of Docker containers for reverse proxy with [Traefik v2.x](https://github.com/containous/traefik), automatic configuration of virtualhosts and generation of SSL certificates with Let's Encrypt.
 
-## Imagens utilizadas
+## Requirements
 
-2. [traefik](https://github.com/containous/traefik)
+* Docker 19.03 or higher
+* Docker Compose 1.27 or higher
 
-## Contribuição
+## Contributing
 
-1. Fork este repositório!
-2. Crie sua feature a partir da branch **develop**: `git checkout -b feature/my-new-feature`
-3. Escreva e comente seu código.
-4. Commit suas alterações: `git commit -am 'Add some feature'`
-5. Faça um `push` para a branch: `git push origin feature/my-new-feature`
-6. Faça um `pull request` para a branch **develop**
+1. Fork this repository!
+2. Create your feature from the **develop** branch: git checkout -b feature/my-new-feature
+3. Write and comment your code
+4. Commit your changes: `git commit -am 'Add some feature'`
+5. Push the branch: `git push origin feature/my-new-feature`
+6. Make a pull request to the branch **develop**
 
-## Créditos
+
+## Credits
 
 [Fábio Assunção](https://github.com/fabioassuncao) e todos os [contribuidores](https://github.com/codions/docker-boilerplate-traefik-proxy/graphs/contributors).
 
-## Licença
+## License
 
-Licenciado sob a licença MIT.
+Licensed under the MIT License.
