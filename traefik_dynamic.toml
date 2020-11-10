@@ -1,8 +1,6 @@
 [http.middlewares.simpleAuth.basicAuth]
   users = [
-  	# admin:admin
-  	# $ htpasswd -nb admin your_secure_password
-    "admin:$apr1$NoAeB.2l$1SSrKCuFXPPruT0BICWx6."
+    "admin:$apr1$hR1niB3v$rrLbUoAuySzeBye3cRHYB." # admin:admin
   ]
 
 [http.routers.api]
