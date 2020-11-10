@@ -20,10 +20,11 @@ Boilerplate for quick configuration of Docker containers for reverse proxy with 
 5. Push the branch: `git push origin feature/my-new-feature`
 6. Make a pull request to the branch **develop**
 
-
 ## Credits
 
-[Fábio Assunção](https://github.com/fabioassuncao) e todos os [contribuidores](https://github.com/codions/docker-boilerplate-traefik-proxy/graphs/contributors).
+* [Fábio Assunção](https://github.com/fabioassuncao)
+* [All Contributors](../../contributors)
+
 
 ## License
 

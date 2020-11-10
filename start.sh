@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 if [[ ! -e acme.json ]]; then
 	touch acme.json
 	chmod 600 acme.json
