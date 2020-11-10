@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+
+  traefik:
+    image: traefik:v2.3
+    container_name: traefik
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./traefik.toml:/traefik.toml
+      - ./traefik_dynamic.toml:/traefik_dynamic.toml
+      - ./acme.json:/acme.json
+    ports:
+      - "80:80"
+      - "443:443"
+
+networks:
+ default:
+  external:
+   name: web

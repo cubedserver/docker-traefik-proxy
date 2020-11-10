@@ -1,0 +1,14 @@
+[http.middlewares.simpleAuth.basicAuth]
+  users = [
+  	# admin:admin
+  	# $ htpasswd -nb admin your_secure_password
+    "admin:$apr1$NoAeB.2l$1SSrKCuFXPPruT0BICWx6."
+  ]
+
+[http.routers.api]
+  rule = "Host(`domain.test`)"
+  entrypoints = ["websecure"]
+  middlewares = ["simpleAuth"]
+  service = "api@internal"
+  [http.routers.api.tls]
+    certResolver = "lets-encrypt"

@@ -1,10 +1,9 @@
-# Docker boilerplate server
+# Traefik Boilerplate Proxy
 
 Boilerplate para configuração rápida de containers Docker para proxy reverso com traefik, configuração automática de virtualhosts e geração de certificados SSL com Let's Encrypt.
 
 ## Imagens utilizadas
 
-1. [portainer](https://github.com/portainer/portainer)
 2. [traefik](https://github.com/containous/traefik)
 
 ## Contribuição
