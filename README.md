@@ -1,7 +1,7 @@
 # Traefik Boilerplate Proxy
 
 <div align="center">
-  <img src="examples/screenshot.png" loading="lazy" />
+  <img src="examples/screenshot_1.png" loading="lazy" />
 </div>
 
 Boilerplate for quick configuration of Docker containers for reverse proxy with [Traefik v2.x](https://github.com/containous/traefik), automatic configuration of virtualhosts and generation of SSL certificates with Let's Encrypt.
