@@ -10,7 +10,7 @@ services:
   blog:
     image: wordpress:5.5
     environment:
-      WORDPRESS_DB_PASSWORD: your_secure_password
+      - WORDPRESS_DB_PASSWORD=your_secure_password
     labels:
       - traefik.http.routers.blog.rule=Host(`blog.example.com`)
       - traefik.http.routers.blog.tls=true
@@ -25,15 +25,14 @@ services:
   mysql:
     image: mysql:5.7
     environment:
-      MYSQL_ROOT_PASSWORD: your_secure_password
+      - MYSQL_ROOT_PASSWORD=your_secure_password
     networks:
       - internal
     labels:
       - traefik.enable=false
 
   adminer:
-    image: adminer:4.6.3-standalone
-    labels:
+    image: adminer:4.7.7
     labels:
       - traefik.http.routers.adminer.rule=Host(`adminer.example.com`)
       - traefik.http.routers.adminer.tls=true
