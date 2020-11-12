@@ -16,6 +16,6 @@ services:
       - "443:443"
 
 networks:
- default:
-  external:
-   name: web
+  default:
+    external:
+      name: web
