@@ -14,7 +14,7 @@ Boilerplate for quick configuration of Docker containers for reverse proxy with 
 
 ## Installation
 
-1. [Download](https://github.com/fabioassuncao/docker-boilerplate-traefik-proxy/archive/master.zip) the latest version
+1. [Download](https://github.com/cubedserver/docker-boilerplate-traefik-proxy/archive/master.zip) the latest version
 2. Generate a password for the Traefik admin user: `htpasswd -nb admin your_secure_password`
 3. Edit the traefik_dynamic.toml file and update with the generated password
 4. Create a new Docker network called `web`
@@ -24,7 +24,7 @@ Boilerplate for quick configuration of Docker containers for reverse proxy with 
 
 ## Tips
 
-If you are looking for a script for initial server settings on DigitalOcean, Linone, AWS EC2 or similar, see the repository [fabioassuncao/setup-vps](https://github.com/fabioassuncao/setup-vps)
+If you are looking for a script for initial server settings on DigitalOcean, Linone, AWS EC2 or similar, see the repository [cubedserver/server-setup](https://github.com/cubedserver/server-setup)
 
 ## Contributing
 
