@@ -4,7 +4,7 @@
   ]
 
 [http.routers.api]
-  rule = "Host(`domain.test`)"
+  rule = "Host(`traefik.domain.test`)"
   entrypoints = ["websecure"]
   middlewares = ["simpleAuth"]
   service = "api@internal"
