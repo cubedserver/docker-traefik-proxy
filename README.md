@@ -1,10 +1,10 @@
-# Traefik Boilerplate Proxy
+# Traefik Proxy
 
 <div align="center">
-  <img src="examples/screen_1.png" loading="lazy" />
+  <img src="templates/screen.png" loading="lazy" />
 </div>
 
-Boilerplate for quick configuration of Docker containers for reverse proxy with [Traefik v2.x](https://github.com/containous/traefik), automatic configuration of virtualhosts and generation of SSL certificates with Let's Encrypt.
+Template for quick configuration of Docker containers for reverse proxy with [Traefik v2.x](https://github.com/containous/traefik), automatic configuration of virtualhosts and generation of SSL certificates with Let's Encrypt.
 
 ## Requirements
 
@@ -14,7 +14,7 @@ Boilerplate for quick configuration of Docker containers for reverse proxy with 
 
 ## Installation
 
-1. [Download](https://github.com/cubedserver/docker-boilerplate-traefik-proxy/archive/master.zip) the latest version
+1. [Download](https://github.com/cubedserver/docker-traefik-proxy/archive/master.zip) the latest version
 2. Generate a password for the Traefik admin user: `htpasswd -nb admin your_secure_password`
 3. Edit the traefik_dynamic.toml file and update with the generated password
 4. Create a new Docker network called `web`
