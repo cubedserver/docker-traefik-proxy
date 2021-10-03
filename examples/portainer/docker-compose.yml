@@ -19,7 +19,7 @@ services:
       - traefik.http.routers.portainer.rule=Host(`portainer.domain.test`)
       - traefik.http.routers.portainer.tls=true
       - traefik.http.routers.portainer.tls.certresolver=lets-encrypt
-      - traefik.port=9443
+      - traefik.port=8000
     ports:
       - "8000:8000"
       - "9443:9443"
