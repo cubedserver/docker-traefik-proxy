@@ -9,7 +9,7 @@ networks:
 services:
 
   portainer:
-    image: portainer/portainer
+    image: portainer/portainer-ce:latest
     container_name: portainer
     restart: always
     volumes:
@@ -19,9 +19,10 @@ services:
       - traefik.http.routers.portainer.rule=Host(`portainer.domain.test`)
       - traefik.http.routers.portainer.tls=true
       - traefik.http.routers.portainer.tls.certresolver=lets-encrypt
-      - traefik.port=9000
+      - traefik.port=9443
     ports:
-      - "9000:9000"
+      - "8000:8000"
+      - "9443:9443"
     networks:
       - internal
       - web
