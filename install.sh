@@ -1,27 +1,29 @@
 #!/bin/bash
 
-: ${DOCKER_NETWORKS:='web internal'}
+: ${DOCKER_NETWORKS:='web,internal'}
 : ${DOCKER_COMPOSE_FILE:='docker-compose.yml'}
-: ${ADDITIONAL_APPS:='adminer mysql phpmyadmin portainer postgres redis whoami wordpress'}
+: ${APP_TEMPLATES:='adminer,mysql,phpmyadmin,portainer,postgres,redis,whoami,wordpress'}
+: ${DEFAULT_WORKDIR:=`pwd`}
 
 function setup_log() {
   echo -e $1
 }
 
-for NETWORK_NAME in $DOCKER_NETWORKS; do
+for NETWORK_NAME in $(echo $DOCKER_NETWORKS | sed "s/,/ /g"); do
     setup_log "⚡ Creating Docker network ${NETWORK_NAME}"
     docker network ls|grep $NETWORK_NAME > /dev/null || docker network create $NETWORK_NAME
 done
 
 if [[ ! -e acme.json ]]; then
 	touch acme.json
-	chmod 600 acme.json
 fi
+
+chmod 600 acme.json
 
 docker-compose -f $DOCKER_COMPOSE_FILE up -d
 
-if [[ ! -z $ADDITIONAL_APPS ]]; then
-    for APP in $ADDITIONAL_APPS; do
+if [[ ! -z $APP_TEMPLATES ]]; then
+    for APP in $(echo $APP_TEMPLATES | sed "s/,/ /g"); do
         if [ -d templates/${APP} ]; then
 
             setup_log "---> ⚡ Starting ${APP} container"
