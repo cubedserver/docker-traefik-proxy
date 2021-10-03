@@ -10,7 +10,7 @@ services:
     container_name: whoami
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.whoami.rule=Host(`whoami.yourdomain.com`)"
+      - "traefik.http.routers.whoami.rule=Host(`whoami.yourdomain.local`)"
       - "traefik.http.routers.whoami.entrypoints=web"
       - "traefik.port=80"
     networks:

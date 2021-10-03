@@ -14,7 +14,7 @@ services:
     restart: always
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.phpmyadmin.rule=Host(`phpmyadmin.yourdomain.com`)"
+      - "traefik.http.routers.phpmyadmin.rule=Host(`phpmyadmin.yourdomain.local`)"
       - "traefik.http.routers.phpmyadmin.tls=true"
       - "traefik.http.routers.phpmyadmin.tls.certresolver=lets-encrypt"
       - "traefik.port=80"
