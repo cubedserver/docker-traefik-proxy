@@ -34,7 +34,7 @@ services:
       - "traefik.http.routers.traefik.middlewares=admin"
       - "traefik.http.routers.traefik.tls.certresolver=lets-encrypt"
       - "traefik.http.routers.traefik.entrypoints=websecure"
-      - "traefik.http.middlewares.admin.basicauth.users=admin:$apr1$hR1niB3v$rrLbUoAuySzeBye3cRHYB."
+      - "traefik.http.middlewares.admin.basicauth.users=admin:$$2y$$05$$IbYykP9bwz8PAhYBxvDkAOdEwMkMvdUvE86OO8EcEAp16Otddn4a6"
 
 networks:
   default:
