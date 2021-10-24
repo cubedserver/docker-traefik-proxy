@@ -14,10 +14,13 @@ services:
       - POSTGRES_PASSWORD=your_secure_password
       - POSTGRES_USER=postgres
     volumes:
-      - ./data:/var/lib/postgresql/data
+      - postgres-data:/var/lib/postgresql/data
     ports: 
       - "5432:5432"
     networks:
       - internal
     labels:
       - "traefik.enable=false"
+
+volumes:
+  postgres-data:

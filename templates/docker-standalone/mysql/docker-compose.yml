@@ -15,8 +15,11 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=your_secure_password
     volumes:
-      - './data:/var/lib/mysql'
+      - mysql-data:/var/lib/mysql
     networks:
       - internal
     labels:
       - "traefik.enable=false"
+
+volumes:
+  mysql-data:
