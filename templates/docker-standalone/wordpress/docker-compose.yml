@@ -1,11 +1,5 @@
 version: "3"
 
-networks:
-  web:
-    external: true
-  internal:
-    external: false
-
 services:
   blog:
     image: wordpress:5.5
@@ -20,3 +14,9 @@ services:
     networks:
       - internal
       - web
+
+networks:
+  web:
+    external: true
+  internal:
+    external: false

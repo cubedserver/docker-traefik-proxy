@@ -1,9 +1,5 @@
 version: "3.3"
 
-networks:
-  internal:
-    external: false
-
 services:
   redis:
     image: redis:latest
@@ -20,6 +16,10 @@ services:
       - internal
     labels:
       - "traefik.enable=false"
+
+networks:
+  internal:
+    external: false
 
 volumes:
   redis-data:

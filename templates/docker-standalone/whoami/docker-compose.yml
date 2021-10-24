@@ -1,9 +1,5 @@
 version: "3"
 
-networks:
-  web:
-    external: true
-
 services:
   whoami:
     image: "traefik/whoami"
@@ -15,3 +11,7 @@ services:
       - "traefik.port=80"
     networks:
       - web
+
+networks:
+  web:
+    external: true

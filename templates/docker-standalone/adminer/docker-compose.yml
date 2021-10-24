@@ -1,13 +1,6 @@
 version: "3"
 
-networks:
-  web:
-    external: true
-  internal:
-    external: false
-
 services:
-
   adminer:
     image: adminer:latest
     labels:
@@ -19,3 +12,9 @@ services:
     networks:
       - internal
       - web
+
+networks:
+  web:
+    external: true
+  internal:
+    external: false

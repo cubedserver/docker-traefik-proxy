@@ -1,11 +1,6 @@
 version: "3.3"
 
-networks:
-  internal:
-    external: false
-
 services:
-
   mysql:
     image: 'mysql:5.7'
     container_name: mysql
@@ -20,6 +15,10 @@ services:
       - internal
     labels:
       - "traefik.enable=false"
+
+networks:
+  internal:
+    external: false
 
 volumes:
   mysql-data:

@@ -1,11 +1,6 @@
 version: "3.3"
 
-networks:
-  internal:
-    external: false
-
 services:
-
   postgres:
     image: postgres:10
     container_name: postgres
@@ -21,6 +16,10 @@ services:
       - internal
     labels:
       - "traefik.enable=false"
+
+networks:
+  internal:
+    external: false
 
 volumes:
   postgres-data:
